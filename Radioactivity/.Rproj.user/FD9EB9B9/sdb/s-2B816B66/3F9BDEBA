@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#Title\n\n#Peaklists the CSV file\n  readData1<-read.csv(spectName1, skip =8 ) \n  readData2<-read.csv(spectName2, skip =8 )\n\n#Select apropraiate data for nuclid identification and activity calculation\n  peakData1<-data.frame(readData1$X.Energy,readData1$X....Area,readData1$Sigma.5,\"01\")\n  peakData2<-data.frame(readData2$X.Energy,readData2$X....Area,readData2$Sigma.5,\"02\")\n\n  nrowPeakdata1<-nrow(peakData1)\n  nrowPeakdata2<-nrow(peakData2)\n\n# If conditional for handle the dual spectra (identify, and reduce the number of the peaks)\n  \n  if ( isTRUE(all.equal(peakData1[nrowPeakdata1,1],peakData1[nrowPeakdata1/2,1], tolerance=0.01)) )\n  {\n    peakData1<-peakData1[1:(nrowPeakdata1/2),]\n    \n  } else{message(\"Spectra 1 maybe not a dual-spectra!\")}\n  \n  if ( isTRUE(all.equal(peakData2[nrowPeakdata2,1],peakData2[nrowPeakdata2/2,1], tolerance=0.1)) )\n  {\n    peakData2<-peakData2[1:(nrowPeakdata2/2),]\n    \n  } else{message(\"Spectra 2 maybe not a dual-spectra!\")}\n  \n#Spar some memory\n  rm(readData1,readData2)\n  rm(nrowPeakdata1,nrowPeakdata2)\n\n  \n  \n# Next Rscript: ",
+    "created" : 1479982475320.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "596603446",
+    "id" : "3F9BDEBA",
+    "lastKnownWriteTime" : 1480069803,
+    "last_content_update" : 1480069803481,
+    "path" : "C:/Programs/RStudio/DATA/Radioactivity/SpectraTransform.R",
+    "project_path" : "SpectraTransform.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

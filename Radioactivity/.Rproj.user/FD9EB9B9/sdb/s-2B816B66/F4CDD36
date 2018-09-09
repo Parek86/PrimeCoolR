@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# The titel!!!!!!\n\n#Cleaning first of all\n  rm(list=ls())\n  \n  currDATE<-Sys.time()\n\n  message(\"************************************************************\")\n  message(\"PrimeCool-R by Dénes párkányi, parkanyi.denes@energia.mta.hu\")\n  message(\"************************************************************\")\n\n\n\n\n\n#A function for input the sampling date\n\n  readName <- function()\n  { \n  an <- readline(prompt=\"Enter the analyst name: \")\n  return(an)\n  \n  }\n  analystName<-readName()\n\n  readName <- function()\n  { \n    en <- readline(prompt=\"Enter the analyst name: \")\n    return(en)\n    \n  }\n  evalName<-readName()\n  \n  \n  message(\"Welcome \", evalName)\n  \n  \n  source(\"SamplingDateReadFunction.R\")\n  source(\"CreateFiles.R\")\n  source(\"SpectraInfoRead.R\")\n  source(\"SpectraTransform.R\")\n\n",
+    "created" : 1479998458993.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3898555964",
+    "id" : "F4CDD36",
+    "lastKnownWriteTime" : 1480069894,
+    "last_content_update" : 1480069894631,
+    "path" : "C:/Programs/RStudio/DATA/Radioactivity/PrimeCoolRsource.R",
+    "project_path" : "PrimeCoolRsource.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

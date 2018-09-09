@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#Title\n\n#Create file names practicaly from the sampling date\ninfoFileName<-format.Date(samplingDATE, format=\"%Y%m%d_%H%M%S_info.csv\")\npeaklistFileName<-format.Date(samplingDATE, format=\"%Y%m%d_%H%M%S_peakl.csv\")\nevalFileName<-format.Date(samplingDATE, format=\"%Y%m%d_%H%M%S_eval.csv\")\n\n#create files\nfile.create(infoFileName, peaklistFileName,evalFileName)\n\n\n\n#Spar some memory\n#rm(samplingDate,samplingTime)\n\n#Write stg to files\n\n  #write.....\n\n# Next Rscript:",
+    "created" : 1480062379936.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1998596310",
+    "id" : "21EAA5A3",
+    "lastKnownWriteTime" : 1480069702,
+    "last_content_update" : 1480069702603,
+    "path" : "C:/Programs/RStudio/DATA/Radioactivity/CreateFiles.R",
+    "project_path" : "CreateFiles.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

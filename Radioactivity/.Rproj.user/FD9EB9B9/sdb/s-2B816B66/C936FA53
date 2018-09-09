@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#Title\n\n#General CSV reading rule...... later\n\n\n#A function for input the spectra id\n\n  readSpectraFile <- function()\n  { \n  sn <- readline(prompt=\"Enter the first measure ID (.csv file): \")\n  return(sn)\n  }\n\n  spectName1<-readSpectraFile()\n\n#Read basic acquisition data from the CSV file for the first measure\n  readAcqinfo1<- read.csv(spectName1, nrows=4)\n\n#Counting time read\n  countTime1<-readAcqinfo1[4,8]\n#Date read and date transformation\n  \n  spectDate1<-readAcqinfo1[3,3]\n  spectTime1<-readAcqinfo1[3,5]\n\n  spectDATE1<-as.POSIXct(paste(spectDate1,spectTime1), format=\"%m-%d-%Y %H:%M:%S\")\n\n\n#Decay time in secs\n  decayTime1<- as.numeric(difftime(spectDATE1,samplingDATE), unit=c(\"secs\"))\n  \n# And now the same way for the second spectra\n  readSpectraFile <- function()\n  { \n    sn <- readline(prompt=\"Enter the second measure ID (.csv file): \")\n    return(sn)\n  }\n  \n  spectName2<-readSpectraFile()\n  \n  \n  readAcqinfo2<- read.csv(spectName2, nrows=4)\n  \n  \n  countTime2<-readAcqinfo2[4,8]\n  \n  spectDate2<-readAcqinfo2[3,3]\n  spectTime2<-readAcqinfo2[3,5]\n  spectDATE2<-as.POSIXct(paste(spectDate2,spectTime2), format=\"%m-%d-%Y %H:%M:%S\")\n  \n  decayTime2<- as.numeric(difftime(spectDATE2,samplingDATE), unit=c(\"secs\"))\n\n\n#Spar some memory\n  rm(readAcqinfo1,readAcqinfo2)\n  rm(spectTime1,spectTime2,spectDate1,spectDate2)\n \n  \n  # Next Rscript:\n\n  \n",
+    "created" : 1479724077243.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "161037207",
+    "id" : "C936FA53",
+    "lastKnownWriteTime" : 1480069702,
+    "last_content_update" : 1480069702673,
+    "path" : "C:/Programs/RStudio/DATA/Radioactivity/SpectraInfoRead.R",
+    "project_path" : "SpectraInfoRead.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

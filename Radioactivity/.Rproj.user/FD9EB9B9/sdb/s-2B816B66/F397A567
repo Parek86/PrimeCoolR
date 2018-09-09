@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#Title\n\n\n#A function for input the sampling date\nreadSamplingDate <- function()\n{ \n  sd <- readline(prompt=\"Enter the sampling date (year-month-day): \")\n  return(sd)\n  \n}\nsamplingDate<-readSamplingDate()\n\n\n#A function for input the sampling time\nreadSamplingTime <- function()\n{ \n  st <- readline(prompt=\"Enter the sampling time (hour:minute:second): \")\n  return(st)\n  \n}\nsamplingTime<-readSamplingTime()\n\n#Date transformation\n\nsamplingDATE<-as.POSIXct(paste(samplingDate,samplingTime), format=\"%Y-%m-%d %H:%M:%S\")\n\n# Next Rscript:\n\n\n\n\n\n  ",
+    "created" : 1479750855958.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3418241532",
+    "id" : "F397A567",
+    "lastKnownWriteTime" : 1480069702,
+    "last_content_update" : 1480069702547,
+    "path" : "C:/Programs/RStudio/DATA/Radioactivity/SamplingDateReadFunction.R",
+    "project_path" : "SamplingDateReadFunction.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
